@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "@esy-ocaml/reason": "3.4.0",
+    "@opam/dune": "*",
+    "@opam/duration": "0.1.2",
+    "@opam/functoria-runtime": "2.2.2",
+    "@opam/lwt": "4.1.0",
+    "@opam/mirage": "3.5.0",
+    "@opam/mirage-bootvar-unix": "0.1.0",
+    "@opam/mirage-clock-unix": "2.0.0",
+    "@opam/mirage-logs": "0.3.0",
+    "@opam/mirage-runtime": "3.5.0",
+    "@opam/mirage-types": "3.5.0",
+    "@opam/mirage-types-lwt": "3.5.0",
+    "@opam/mirage-unix": "3.2.0",
+    "@opam/utop": "2.3.0",
+    "ocaml": "~4.7.0"
+  },
+  "resolutions": {},
+  "devDependencies": {
+    "@opam/merlin": "*",
+    "refmterr": "*",
+    "ocaml": "~4.7.0"
+  }
+}
