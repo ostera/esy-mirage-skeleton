@@ -14,16 +14,14 @@ DHCP, DNS, and Web servers.
 
 ## Prerequisites
 
-- Install latest OPAM (at least 1.2.2), following instructions at
-<https://opam.ocaml.org/>
+- Install latest Esy (at least 1.2.2), following instructions at
+<https://esy.sh/>
 
-- Install the `mirage` package with OPAM, updating your package first if
-necessary:
+- Install esy sandbox and enter an esy shell:
 
 ```
-    $ opam update -u
-    $ opam install mirage
-    $ eval `opam config env`
+    $ esy install
+    $ esy shell
 ```
 
 - Please ensure that your Mirage command-line version is at least 3.0.0 before
@@ -42,7 +40,6 @@ the normal workflow by trying to compile the `noop` application.
 ```
     $ cd tutorials/noop
     $ mirage configure -t unix # initial setup for UNIX backend
-    $ make depend # install dependencies
     $ make # build the program
     $ ./noop # run the program
 ```
@@ -61,7 +58,6 @@ from that location.  For example:
 ```
     $ cd applications/static_website_tls
     $ mirage configure -t unix # initial setup for UNIX backend
-    $ make depend # install dependencies
     $ make # build the program
     $ ./https # run the program
 ```
@@ -119,13 +115,8 @@ and see the section labeled `UNIKERNEL PARAMETERS`.
 
 #### To install dependencies
 
-After running `mirage configure`:
-
-```
-    $ make depend
-```
-
-to install the list of dependencies discovered in the `mirage configure` phase.
+To install dependencies you need to use `esy add` on the top level of the
+repository.
 
 #### To build a unikernel:
 
@@ -152,7 +143,6 @@ Unix:
 ```
     $ cd hello
     $ mirage configure -t unix
-    $ make depend
     $ make
     $ ./hello
 ```
@@ -162,7 +152,6 @@ Xen:
 ```
     $ cd hello
     $ mirage configure -t xen
-    $ make depend
     $ make
     $ sudo xl create xen.xl -c
 ```
@@ -172,7 +161,6 @@ Ukvm:
 ```
     $ cd hello
     $ mirage configure -t hvt
-    $ make depend
     $ make
     $ ./solo5-hvt hello.hvt
 ```
@@ -182,7 +170,6 @@ Virtio:
 ```
     $ cd hello
     $ mirage configure -t virtio
-    $ make depend
     $ make
     $ solo5-virtio-run ./https.virtio
 ```
@@ -192,7 +179,6 @@ Macosx:
 ```
     $ cd hello
     $ mirage configure -t macosx
-    $ make depend
     $ make
     $ ./hello
 ```
@@ -205,7 +191,6 @@ MirageOS unikernels -- please see [the qubes-test-mirage readme](https://github.
 ```
     $ cd hello
     $ mirage configure -t qubes
-    $ make depend
     $ make
     $ ~/test-unikernel hello.xen unikernel-test-vm
 ```
