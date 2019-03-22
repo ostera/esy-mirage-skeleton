@@ -1,6 +1,9 @@
 [![Build Status](https://travis-ci.org/mirage/mirage-skeleton.svg?branch=master)](https://travis-ci.org/mirage/mirage-skeleton)
 
-# mirage-skeleton
+# esy-mirage-skeleton
+
+> NOTE: This is a fork that just puts some Esy on top. All the work is thanks to
+> the Mirage people!
 
 This repository is a collection of **tutorial code** referred to from [the Mirage
 website](https://mirage.io), **example code** for using specific devices like
